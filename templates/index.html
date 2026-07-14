@@ -1,0 +1,55 @@
+🐄 Producción de Leche (Modelo Wood)
+    
+    
+    
+
+
+    
+        🐄 Predicción de producción de leche
+        Modelo no lineal por raza (Modelo de Wood). Entrenado con datos reales-sintéticos.
+        
+        
+            
+                Seleccione la raza
+                
+                    {% for raza in razas %}
+                    {{ raza }}
+                    {% endfor %}
+                
+            
+            
+                Días posparto (Semanas)
+                
+            
+        
+
+        
+
+        
+            
+                
+                    
+                        📘 Predicción
+                        Producción estimada en semana {{ semanas }}:
+                        {{ pred }} litros/día
+                    
+                
+            
+            
+                
+                    
+                        🌟 Pico de producción
+                        Semana del pico: {{ t_pico }}
+                        Producción máxima:
+                        {{ y_pico }} litros/día
+                    
+                
+            
+        
+
+        {% if grafica %}
+        
+            Gráfica de la curva de lactancia
+            
+        
+        {% endif %}
